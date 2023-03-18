@@ -5,15 +5,12 @@
 <head>
 
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="public/style.css">
   
-  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
 
- <title>
-    FE-ASSIGNMENT | Trello </title>
-
+ <title> FE-ASSIGNMENT | Trello </title>
+ <link rel="icon" type="image/png"  href="images/trello.png" alt="trello" width="100" height="100">
   <!-- <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"> -->
-  <link rel="mask-icon" href="https://a.trellocdn.com/prgb/assets/8d4bcc6f7600ccbb6675.svg" color="#0079BF">
   <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -21,9 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/charlie-2" rel="stylesheet">
+
   <title>CodePen - Trello Board Layout with CSS Grid &amp; Flexbox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette:400,700"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
   
   
@@ -347,6 +347,16 @@ body {
     content: '...';
 }
 
+i{
+    float: right;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.list-items li:hover i{
+    visibility: visible;
+}
+
 /*
 
 The following rule will only run if your browser supports CSS grid.
@@ -412,6 +422,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
     .user-settings-btn {
         margin: 0;
     }
+    
 }
 </style>
 
@@ -429,10 +440,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 
 </head>
-<body>
+<body style="font-family: 'Charlie', sans-serif;">
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar" style="font-size: 20px; padding-left: 50px;">
-        <img src="images/trello.jpg" alt="Trello"  style="height: 25px; width: 30px;padding-right: 10px;">
+        <img src="images/trello.jpg"   style="height: 25px; width: 30px;padding-right: 10px;">
         <a class="navbar-brand" href="#" style="font-size: 30px; padding-right: 20px;">Trello</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -465,47 +476,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
       </nav>
       </header>
       
-
-        <!-- <div class="boards-menu">
-    
-            <button class="boards-btn btn"><i class="fab fa-trello boards-btn-icon"></i>Boards</button>
-    
-            <div class="board-search">
-                <input type="search" class="board-search-input" aria-label="Board Search">
-                <i class="fas fa-search search-icon" aria-hidden="true"></i>
-            </div>
-    
-        </div>
-    
-        <div class="logo">
-    
-            <h1><i class="fab fa-trello logo-icon" aria-hidden="true"></i>Trello</h1>
-    
-        </div>
-    
-        <div class="user-settings">
-    
-            <button class="user-settings-btn btn" aria-label="Create">
-                <i class="fas fa-plus" aria-hidden="true"></i>
-            </button>
-    
-            <button class="user-settings-btn btn" aria-label="Information">
-                <i class="fas fa-info-circle" aria-hidden="true"></i>
-            </button>
-    
-            <button class="user-settings-btn btn" aria-label="Notifications">
-                <i class="fas fa-bell" aria-hidden="true"></i>
-            </button>
-    
-            <button class="user-settings-btn btn" aria-label="User Settings">
-                <i class="fas fa-user-circle" aria-hidden="true"></i>
-            </button>
-    
-        </div>
-     -->
-    <!-- </header> -->
-    <!-- End of masthead -->
-    
     
     <!-- Board info bar -->
     <section class="board-info-bar" style="margin-top: 10px;">
@@ -513,20 +483,20 @@ Remove or comment-out the code block below to see how the browser will fall-back
         <div class="board-controls">
     
             <button class="board-title btn">
-                <h2>Web Development</h2>
+                <h2>FE-ASSIGNMENT</h2>
             </button>
-    
+            
             <button class="star-btn btn" aria-label="Star Board">
                 <i class="far fa-star" aria-hidden="true"></i>
             </button>
     
-            <button class="personal-btn btn">Personal</button>
+            <button class="btn-lg personal-btn btn">Public</button>
     
-            <button class="private-btn btn"><i class="fas fa-briefcase private-btn-icon" aria-hidden="true"></i>Private</button>
-    
+            <button class="private-btn btn"><i class="fas fa-briefcase private-btn-icon" aria-hidden="true"></i>Board</button>
+            <button class="btn btn-lg active dropdown-toggle" id="dropMenu"> </button>
         </div>
-    
-        <button class="menu-btn btn"><i class="fas fa-ellipsis-h menu-btn-icon" aria-hidden="true"></i>Show Menu</button>
+        <button type="button" class="btn btn-lg " style="float: right; margin: 0 5px 0 auto">Filter </button>
+        <button type="button" class="btn btn-primary" style="font-size: 20px;margin-right:10px"><h1>...</h1></button>
     
     </section>
     <!-- End of board info bar -->
@@ -539,26 +509,62 @@ Remove or comment-out the code block below to see how the browser will fall-back
             <h3 class="list-title">To Do</h3>
     
             <ul class="list-items connected-sortable draggable-right">
-                <li>Complete mock-up for client website</li>
-                <li>Email mock-up to client for feedback</li>
-                <li>Update personal website header background image</li>
-                <li>Update personal website heading fonts</li>
-    
-            <button class="add-card-btn btn" method="post">Add a card</button>
+                <li>Setup Redux Tool Kit
+                    <i class="fa fa-pencil" aria-hidden="true">
+                        
+                    </i>
+
+                </li>
+                <li>Implement Landing Page
+                    <i class="fa fa-pencil" type="button" aria-hidden="true"></i>
+                </li>
+                
+
+                <%for(var i=0; i<listss1.length; i++){%>
+                    <li><%=listss1[i]%>
+                        <i class="fa fa-pencil" type="button"  aria-hidden="true">
+                           
+                        </i>
+
+                    </li>
+
+                <%}%>
+            </ul>
+        <div>
+            <button onclick="myFunction1()" class="add-card-btn btn" id="demo1" style="display: block;" >Add a card</button>
+        </div>
+
+            <form action="/" method="post" id="demo11" style="display: none;">
+                <textarea placeholder="Enter Text Here...." name="text1" id="text1" cols="30" rows="5"></textarea placeholder="Enter Text Here....">
+                <button class="btn btn-info" type="submit" style="background-color: rgb(0, 187, 255);height: 30px; width: 25%;">Add Card</button>
+            </form>
     
         </div>
     
         <div class="list ">
     
             <h3 class="list-title">Doing</h3>
-    
             <ul class="list-items connected-sortable draggable-right">
-                <li>Clear email inbox</li>
-                <li>Finalise requirements for client web design</li>
-                <li>Begin work on mock-up for client website</li>
+                <li>Setup Material UI
+                    <i class="fa fa-pencil"  aria-hidden="true"></i>
+
+                </li>
+
+                <%for(var i=0; i<listss2.length; i++){%>
+                    <%if(listss2[i]!=="")%>
+                    <li><%=listss2[i]%>
+                        <i class="fa fa-pencil"  aria-hidden="true"></i>
+                    </li>
+                <%}%>
             </ul>
-    
-            <button class="add-card-btn btn " id="myButton">Add a card</button>
+        <div>
+            <button onclick="myFunction2()" class="add-card-btn btn" id="demo2" style="display: block;" >Add a card</button>
+        </div>
+
+            <form action="/" method="post" id="demo22" style="display: none;">
+                <textarea placeholder="Enter Text Here...." name="text2"  id="text2" cols="30" rows="5" ></textarea placeholder="Enter Text Here....">
+                <button class="btn btn-info" type="submit" style="background-color: rgb(0, 187, 255);height: 30px; width: 25%;">Add Card</button>
+            </form>
     
         </div>
      
@@ -567,28 +573,64 @@ Remove or comment-out the code block below to see how the browser will fall-back
             <h3 class="list-title">Done</h3>
     
             <ul class="list-items connected-sortable draggable-right">
-                <li>HTML Elements</li>
-                <li>HTML Form Validation</li>
-                <li>HTML Structured Data</li>
-                <li>Advanced CSS Selectors</li>
-                
+                <li>Initialize React Project
+                    <i class="fa fa-pencil"  aria-hidden="true"></i>
+                </li>
+                <li>Setup Eslint and Prettier
+                    <i class="fa fa-pencil"  aria-hidden="true"></i>
+
+                </li>
+
+                <%for(var i=0; i<listss3.length; i++){%>
+                    <li><%=listss3[i]%>
+                        <i class="fa fa-pencil"  aria-hidden="true"></i>
+                    </li>
+                <%}%>
             </ul>
-    
-            <button class="add-card-btn btn">Add a card</button>
-    
+        <div>
+            <button onclick="myFunction3()" class="add-card-btn btn" id="demo3" style="display: block;" >Add a card</button>
+        </div>
+
+            <form action="/" method="post" id="demo33" style="display: none;">
+                <textarea placeholder="Enter Text Here...." name="text3" id="text3" cols="30" rows="5"></textarea placeholder="Enter Text Here....">
+                <button class="btn btn-info" type="submit" style="background-color: rgb(0, 187, 255);height: 30px; width: 25%;">Add Card</button>
+            </form>
+
+
         </div>
     
         
     
-        <input type="button" id="myButton" value="Add "/>
-    
+
     </section>
     <!-- End of lists container -->
     <script>
-            $("#myButton").click(function(){
-                $("#myButton").after('<input type="text" id="textInput" value="">');
+        function myFunction1() {
+            //show div display 
+            document.getElementById("demo11").style.display = "block";
+            $("#demo1").hide();
+        }
+        function myFunction2() {
+            //show div display 
+            document.getElementById("demo22").style.display = "block";
+            $("#demo2").hide();
+        }
+        function myFunction3() {
+            //show div display 
+            document.getElementById("demo33").style.display = "block";
+            $("#demo3").hide();
+        }
+        $(document).ready(function() {
+        $(".toggle-button").click(function() {
+            $(this).parent().find("").slideToggle(function() {
+            // Animation complete.
             });
+        });
+        });
+
         $(".draggable-left, .draggable-right").sortable({
+            //if item is dragged i want to remove it from listss
+        
         connectWith: ".connected-sortable",
         stack: ".connected-sortable ul"
         }).disableSelection();
